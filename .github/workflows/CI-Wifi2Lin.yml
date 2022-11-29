@@ -23,7 +23,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
     env:
-      workspace: E:/Linak/
+      workspace: "E:/Linak/"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

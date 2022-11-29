@@ -13,20 +13,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
-env:
-  DAY_OF_WEEK: Monday
-
 jobs:
-  
-  # This workflow contains a single job called "build"
+
   Backup:
-    # The type of runner that the job will run on
     runs-on: self-hosted
-   
-    
     steps:
         - name: "create directory"
           run: mkdir E:\Linak\Test_directory
+        - name: "remove a directory"
+          run: Remove-Item -Recurse -Force E:\Linak\Test_directory
+        
         
         
     

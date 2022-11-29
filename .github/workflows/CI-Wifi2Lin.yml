@@ -23,12 +23,10 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
    
-    env:
-        Greeting: Hello
+    
     steps:
-        - name: "Say Hello Mona it's Monday"
-          run: Write-Host "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-          env:
-            First_Name: Mona
+        - name: "create directory"
+          run: mkdir E:\Linak\Test_directory
+        
         
     

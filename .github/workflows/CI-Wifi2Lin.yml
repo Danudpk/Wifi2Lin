@@ -33,5 +33,7 @@ jobs:
       
       - name: Run a one-line script
         run: echo "$workspace"
+        env:
+          workspace: E:/Linak/
         
     

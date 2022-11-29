@@ -31,6 +31,6 @@ jobs:
     
       
       - name: Run a one-line script
-        run: mdir test
+        run: mkdir test
         
     

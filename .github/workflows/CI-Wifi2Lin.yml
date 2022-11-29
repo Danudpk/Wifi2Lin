@@ -14,9 +14,8 @@ on:
   workflow_dispatch:
   
 env:
-  workspace: E:/Linak/
+  DAY_OF_WEEK: Monday
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   
   # This workflow contains a single job called "build"
@@ -24,16 +23,12 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
    
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+        Greeting: Hello
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-    
-      
-      - name: Run a one-line script
-        run: echo "$workspace"
-        env:
-          workspace: E:/Linak/
+        - name: "Say Hello Mona it's Monday"
+          run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+          env:
+            First_Name: Mona
         
     

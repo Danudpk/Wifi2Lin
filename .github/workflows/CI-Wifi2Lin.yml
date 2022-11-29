@@ -18,10 +18,13 @@ jobs:
   Backup:
     runs-on: self-hosted
     steps:
-        - name: "create directory"
-          run: mkdir E:\Linak\Test_directory
-        - name: "remove a directory"
-          run: Remove-Item -Recurse -Force -Verbose E:\Linak\Test_directory
+        - name: "Cleanup"
+          run: |
+            Remove-Item -Recurse -Force -Verbose E:\Linak\gateway
+            Remove-Item -Recurse -Force -Verbose E:\Linak\gw
+            Remove-Item -Recurse -Force -Verbose E:\Linak\homeline
+            Remove-Item -Recurse -Force -Verbose E:\Linak\deskline
+       
         
         
         

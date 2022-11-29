@@ -12,23 +12,46 @@ on:
   
 jobs:
 
-  Backup:
+  Cleanup:
     runs-on: self-hosted
     steps:
-        - name: "Cleanup"
+        - name: "Cleanup up dir"
           run: |
             mkdir E:\Linak\homeline
             Remove-Item -Recurse -Force -Verbose E:\Linak\homeline
+  Clone:
+    runs-on: self-hosted
+    steps:
         - name: "Clone"
           run: Write-Host "To be implemented"
+          
+  Backup:
+    runs-on: self-hosted
+    steps:
         - name: "Backup"
           run: Write-Host "To be implemented"
+          
+  BuildApplication:
+    runs-on: self-hosted
+    steps:
         - name: "Build Application"
           run: Write-Host "To be implemented"
+        
+  BuildBootLoader:
+    runs-on: self-hosted
+    steps:
         - name: "Build Bootloader"
           run: Write-Host "To be implemented"
+          
+  Sign:
+    runs-on: self-hosted
+    steps:
         - name: "Sign"
           run: Write-Host "To be implemented"
+          
+  Encrypt:
+    runs-on: self-hosted
+    steps:
         - name: "Encrypt"
           run: Write-Host "To be implemented"
           

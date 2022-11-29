@@ -24,16 +24,17 @@ jobs:
     runs-on: self-hosted
     steps:
         - name: "Clone"
-          run: Write-Host "To be implemented"
+          run: |
+            cd E:\Linak\homeline
+            git clone --recursive https://github.com/Linak/iot-gateway-homeline.git
           
   Backup:
     needs: Clone
     runs-on: self-hosted
     steps:
         - name: "Backup"
-          run: |
-            cd E:\Linak\homeline
-            git clone --recursive https://github.com/Linak/iot-gateway-homeline.git
+          run: Write-Host "To be implemented"
+            
           
   BuildApplication:
     needs: Backup

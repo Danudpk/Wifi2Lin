@@ -21,7 +21,7 @@ jobs:
         - name: "create directory"
           run: mkdir E:\Linak\Test_directory
         - name: "remove a directory"
-          run: Remove-Item -Recurse -Force E:\Linak\Test_directory
+          run: Remove-Item -Recurse -Force -Verbose E:\Linak\Test_directory
         
         
         

@@ -17,8 +17,8 @@ jobs:
     steps:
         - name: "Cleanup up dir"
           run: |
-            mkdir E:\Linak\homeline
             Remove-Item -Recurse -Force -Verbose E:\Linak\homeline
+            mkdir E:\Linak\homeline
   Clone:
     needs: Cleanup
     runs-on: self-hosted
@@ -31,7 +31,9 @@ jobs:
     runs-on: self-hosted
     steps:
         - name: "Backup"
-          run: Write-Host "To be implemented"
+          run: |
+            cd E:\Linak\homeline
+            git clone --recursive https://github.com/Linak/iot-gateway-homeline.git
           
   BuildApplication:
     needs: Backup

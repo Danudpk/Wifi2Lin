@@ -33,7 +33,7 @@ jobs:
     runs-on: self-hosted
     steps:
         - name: "Backup"
-          run: Write-Host "To be implemented"
+          run: Compress-Archive -Path E:\Linak\homeline -CompressionLevel Fastest -DestinationPath "E:\Linak\wifi2lin-backup\homeline-$((Get-Date).ToString('yyyy-MM-dd-HH.mm.ss')).zip"
             
           
   BuildApplication:
